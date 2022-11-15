@@ -51,13 +51,6 @@ for (const property in object) {
 // ================== Currying Function ===
 
 // let printList = List("Akshay","Khurana","Manisha","Rahul");
-let multiply = function(x){
-    return function(y){
-        console.log(x * y)
-    }
-}
-let mult=multiply(3)
-mult(2)
 
 function main() {
     let result=[];
