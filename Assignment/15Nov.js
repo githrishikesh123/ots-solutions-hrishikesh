@@ -31,15 +31,15 @@ for (const property in object) {
 
 
   function sum(){
-    let cache={}
+    let cache={};
     return function(x,y){
-        if(cache[(x,y)] ){
+        if(cache[x +''+ y] ){
             console.log(`alredy calculated for ${x} and ${y}`);
             return cache[(x, y)];
         }
         const result =  x+y;
         console.log(result)
-        cache[(x,y)] = result;
+        cache[x+''+y] = result;
         return result;
     }
   }
@@ -47,7 +47,21 @@ for (const property in object) {
   memoized(7,6);
   memoized(7,6);
   memoized(15,5);
+  memoized(15,5);
+  memoized(5,15);
+  memoized(8,15);
+  memoized(6,14);
 
+
+
+
+
+
+
+
+
+
+  
 // ================== Currying Function ===
 
 // let printList = List("Akshay","Khurana","Manisha","Rahul");

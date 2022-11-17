@@ -24,8 +24,9 @@ function submitBtn(){
     document.getElementById("weightInput").value="";
     if(height<=0 || weight<=0){
         alert("Enter Valid Number");
-        document.getElementById("bmires").innerHTML=bmiRes;
-    document.getElementById("bmiQueries").innerHTML=bmiQueries;
+        // ---- for NaN 
+        document.getElementById("bmires").innerHTML="";
+    document.getElementById("bmiQueries").innerHTML="";
     }
     // ----------- Result Cases ----------
     if(bmiRes<18.5){
@@ -39,3 +40,6 @@ function submitBtn(){
         alert("You are in Obesity state")
     }
 }
+
+
+// try callback here
