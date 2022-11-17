@@ -40,6 +40,30 @@
 
 // ==============================  promises and fetching data with error handling ==============
 
+const getCountryData = (country) => {
+  fetch(`https://restcountries.com/v2/name/${country}`)
+    .then((data) => {
+      if (!data.ok) throw new Error("Country Not Found");
+      return data.json();
+    })
+    .then((result) => {
+      console.log(result);
+      const neighbour = result[0].borders;
+      console.log(neighbour);
+      return fetch(`https://restcountries.com/v2/nasme/${neighbour[2]}`);
+    })
+    .then((neighbour) => {
+        if (!neighbour.status) throw new Error("Country Not Found");
+        // console.log(neighbour.status)
+      neighbour.json();
+      console.log(neighbour);
+    })
+    .catch((error) => console.log(error, "error occured"));
+};
+getCountryData("peru");
+
+// ------------------------------------------
+
 // const getCountryData1 = (country)=>{
 //     const fetchData= fetch(`https://restcountries.com/v2/name/${country}`).then((data)=>data.json()).then((result)=>console.log(result))
 // }
@@ -73,23 +97,3 @@
 //    }).catch((error)=>console.log(error,'error occured'))
 // }
 // getCountryData('peru');
-
-
-const getCountryData = (country) => {
-  fetch(`https://restcountries.com/v2/name/${country}`)
-    .then((data) => {
-      if(!data.ok) throw new Error('country not found')
-      return data.json()
-    })
-    .then(result => {
-      console.log(result);
-      const neighbour = result[1].borders;
-      return fetch(`https://restcountries.com/v2/name/${neighbour}`);
-    })
-    .then((neighbour) => {
-        
-      console.log(neighbour);
-    })
-    .catch((error) => console.log(error, "error occured"));
-};
-getCountryData("india");
