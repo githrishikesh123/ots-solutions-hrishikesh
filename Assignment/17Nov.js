@@ -48,13 +48,15 @@ const getCountryData = (country) => {
     })
     .then((result) => {
       console.log(result);
-      const neighbour = result[0].borders;
+      console.log(result[0].borders, "console all borders");
+      const neighbour = result[0].borders[3];
+
       console.log(neighbour);
-      return fetch(`https://restcountries.com/v2/nasme/${neighbour[2]}`);
+      return fetch(`https://restcountries.com/v2/name/${neighbour}`);
     })
     .then((neighbour) => {
-        if (!neighbour.status) throw new Error("Country Not Found");
-        // console.log(neighbour.status)
+      if (neighbour.status != 200)
+        throw new Error("Neighbour Country Not Found");
       neighbour.json();
       console.log(neighbour);
     })
@@ -63,6 +65,18 @@ const getCountryData = (country) => {
 getCountryData("peru");
 
 // ------------------------------------------
+//  Fetch API=======>
+// The Fetch API is a simple interface for fetching resources.
+//  Fetch allows us to make network request and handle responses
+
+// Promises======>
+// The Promise object represents the eventual completion (or failure) of an asynchronous operation
+//  and its resulting value.
+
+/*
+When working with Promises, we must be aware of what it’s current state.
+ There are three states, Pending, Fulfilled and Rejected.
+*/
 
 // const getCountryData1 = (country)=>{
 //     const fetchData= fetch(`https://restcountries.com/v2/name/${country}`).then((data)=>data.json()).then((result)=>console.log(result))
