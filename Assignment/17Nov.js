@@ -50,19 +50,18 @@ const getCountryData = (country) => {
       console.log(result);
       console.log(result[0].borders, "console all borders");
       const neighbour = result[0].borders[3];
-
       console.log(neighbour);
       return fetch(`https://restcountries.com/v2/name/${neighbour}`);
     })
     .then((neighbour) => {
-      if (neighbour.status != 200)
-        throw new Error("Neighbour Country Not Found");
+    //   if (neighbour.status != 200)
+    //     throw new Error("Neighbour Country Not Found");
       neighbour.json();
       console.log(neighbour);
     })
     .catch((error) => console.log(error, "error occured"));
 };
-getCountryData("peru");
+getCountryData("india");
 
 // ------------------------------------------
 //  Fetch API=======>
@@ -77,37 +76,3 @@ getCountryData("peru");
 When working with Promises, we must be aware of what it’s current state.
  There are three states, Pending, Fulfilled and Rejected.
 */
-
-// const getCountryData1 = (country)=>{
-//     const fetchData= fetch(`https://restcountries.com/v2/name/${country}`).then((data)=>data.json()).then((result)=>console.log(result))
-// }
-// console.log(getCountryData1('peru'),"data getting")
-
-// const getCountryData = country=>{
-//     fetch(`https://restcountries.com/v2/name/${country}`).then(data=>{
-//        // if(!data.ok) throw new Error('country not found')
-//        // return data.json()
-//    }).then(result=>{
-//        console.log(result)
-//        const neighbour = result[0].borders[0]
-//        return fetch(`https://restcountries.com/v2/name/${neighbour}`)
-//    }).then(neighbour=>{
-//        // if(!data.status) throw new Error('Error occured in Neighbour req!!')
-//        console.log(neighbour)
-//    }).catch((error)=>console.log(error,'error occured'))
-// }
-// getCountryData('india');
-
-// const getCountryData = country=>{
-//     fetch(`https://restcountries.com/v2/name/${country}`).then((data=>data.json())).then(result=>{
-//         // if(!data.ok) throw new Error('country not found')
-//        console.log(result)
-//        const neighbour = result[0].borders;
-//        console.log(neighbour)
-//        return fetch(`https://restcountries.com/v2/name/${neighbour}`)
-//    }).then(neighbour=>{
-//        // if(!data.status) throw new Error('Error occured in Neighbour req!!')
-//     //    console.log(neighbour)
-//    }).catch((error)=>console.log(error,'error occured'))
-// }
-// getCountryData('peru');
