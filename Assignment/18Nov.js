@@ -33,9 +33,9 @@ const getNumber=(arr) => {
     if(Array.isArray(value)){
     getNumber(value)
     }else{
-        let arr2 =[]
-        arr2.push(value)
-        console.log(arr2)
+        // let arr2 =[]
+        // arr2.push(value)
+        console.log(value)
     }
 })
 }
