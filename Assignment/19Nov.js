@@ -10,7 +10,6 @@ Note: We have geoLocation method for getting the current coordinates:
 https://www.w3schools.com/jsref/prop_nav_geolocation.asp
 */
 
-/*
 const whereAmI = async (lat,long) => {
     try {
       const data = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`);
@@ -23,9 +22,11 @@ const whereAmI = async (lat,long) => {
   };
   whereAmI(29.94569,78.164246);
 
-  */
-//   ----------------------------------------
 
+//   --------------------------------- .then -------------------
+
+
+/*
   const whereAmI2 = (lat,long) => {
     fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`)
       .then((data) => {
@@ -37,6 +38,8 @@ const whereAmI = async (lat,long) => {
       .catch((error) => console.log(error, "Error occured"));
   };
   whereAmI2(11.016010,76.970306);
+
+  */
 
 
 
