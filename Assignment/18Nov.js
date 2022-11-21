@@ -2,21 +2,20 @@
 // call once function
 // desc: create a function which can't be called more than once
 
-/*
-var variables = true
-const testFunction = () => {
-    if(variables == true){
-      variables = false
-      console.log("ABC")
-    
-  }else {
-      throw "Alredy called once"
-  }
-}
-testFunction()
-testFunction()
-testFunction()
-*/
+
+// var variables = true
+// const onceFunction = () => {
+//     if(variables == true){
+//       variables = false
+//       console.log("Hello JavaScript")
+
+//   }else {
+//       throw "Alredy called once"
+//   }
+// }
+// onceFunction()
+// onceFunction()
+// onceFunction()
 
 
 
@@ -25,24 +24,23 @@ testFunction()
 // const arr = [[1,2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 // create a fucntion to flat the array => [1,2,2,4,5,6,2,4,8,9]
 
-/*
+
 const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 
 console.log("arr",arr)
-const getNum = (arr) => {
-  arr.forEach((e)=>{
-    if(Array.isArray(e)){
-    getNum(e)
+const getNumber=(arr) => {
+  arr.forEach((value)=>{
+    if(Array.isArray(value)){
+    getNumber(value)
     }else{
-        v = e + "kk"
-  console.log(e)
+        let arr2 =[]
+        arr2.push(value)
+        console.log(arr2)
     }
 })
 }
-getNum(arr)
-*/
-// console.log(arr,typeof(arr))
-
+getNumber(arr)
+// console.log("test",arr.join())
 
 
 // task 3 =========================================================================
@@ -64,14 +62,6 @@ for(i=0;i<=b.length-1;i++){
     var resFinal2 =res2[i]
     console.log(resFinal2)
 }
-console.log(resFinal2)
-
-
-
-
-
-
-
 
 
 
@@ -89,12 +79,6 @@ console.log(resFinal2)
 // }
 // let output2=arr2.map(double);
 // console.log(output2);
-
-
-
-
-
-
 
 // function outer(){
 //     let executed = false;
