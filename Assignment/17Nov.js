@@ -54,14 +54,23 @@ const getCountryData = (country) => {
       return fetch(`https://restcountries.com/v2/name/${neighbour}`);
     })
     .then((neighbour) => {
-    //   if (neighbour.status != 200)
-    //     throw new Error("Neighbour Country Not Found");
+      if (neighbour.status != 200)
+        throw new Error("Neighbour Country Not Found");
       neighbour.json();
       console.log(neighbour);
     })
     .catch((error) => console.log(error, "error occured"));
 };
-getCountryData("india");
+getCountryData("peru");
+
+
+
+
+
+
+
+
+
 
 // ------------------------------------------
 //  Fetch API=======>

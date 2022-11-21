@@ -3,10 +3,10 @@
 // desc: create a function which can't be called more than once
 
 
-// var variables = true
+// var variables = true;
 // const onceFunction = () => {
 //     if(variables == true){
-//       variables = false
+//       variables = false;
 //       console.log("Hello JavaScript")
 
 //   }else {
