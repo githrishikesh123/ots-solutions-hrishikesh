@@ -59,7 +59,6 @@ getData();
 */
 
 
-
 // ============ POST req , Add New User in (https://reqres.in/api/users) ================
 
 // const myData = ()=>{

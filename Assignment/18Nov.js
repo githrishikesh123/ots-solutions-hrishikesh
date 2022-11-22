@@ -25,44 +25,65 @@
 // create a fucntion to flat the array => [1,2,2,4,5,6,2,4,8,9]
 
 
-const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
+// const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 
-console.log("arr",arr)
-const getNumber=(arr) => {
-  arr.forEach((value)=>{
-    if(Array.isArray(value)){
-    getNumber(value)
-    }else{
-        // let arr2 =[]
-        // arr2.push(value)
-        console.log(value)
-    }
-})
-}
-getNumber(arr)
+// console.log("arr",arr)
+// const getNumber=(arr) => {
+//   arr.forEach((value)=>{
+//     if(Array.isArray(value)){
+//     getNumber(value)
+//     }else{
+//         console.log(value)
+//     }
+// })
+// }
+// getNumber(arr)
 // console.log("test",arr.join())
 
 
-// task 3 =========================================================================
+// =========================== task 3 =======================================
 // a = [{name:'amit'}, {name: 'Akshay'}]
 // b = [{name: 'abcd'},{name:'abdc'}, {name:'kjdshck}, {name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'}]
 // result = [{name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'}]
 
-a = [{name:'amit'}, {name: 'Akshay'}]
-b = [{name: 'abcd'},{name:'abdc'}, {name:'kjdshck'}, {name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'}]
+a = [{name:'amit'}, {name: 'Akshay'},{name: 'Joey'}]
+b = [{name: 'abcd'},{name:'abdc'}, {name:'kjdshck'}, {name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'},{name:"Joey"}]
 
-for(i=0;i<=a.length-1;i++){
-    let res1 = Object.values(a);
-    let resFinal =res1[i]
-    console.log(resFinal)
+
+const compareArray = (a, b) => {
+   let res = [];
+   res = a.filter(ele1 => {
+      return b.find(ele2 => {
+         return ele2.name === ele1.name;
+      });
+   });
+   return res;
 }
+result=compareArray(a, b);
+console.log(result);
 
-for(i=0;i<=b.length-1;i++){
-    let res2 = Object.values(b);
-    var resFinal2 =res2[i]
-    console.log(resFinal2)
-}
 
+
+
+
+
+// for(i=0;i<=a.length-1;i++){
+//     let res1 = Object.values(a);
+//     let resFinal =res1[i]
+//     console.log(resFinal)
+// }
+
+// for(i=0;i<=b.length-1;i++){
+//     let res2 = Object.values(b);
+//     var resFinal2 =res2[i]
+//     console.log(resFinal2)
+//     if(res1[i]=res2[i]){
+//         console.log(res1)
+//     }
+// }
+
+
+    
 
 
 // ======================== Raw Work=============
