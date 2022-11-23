@@ -5,7 +5,3 @@
 //      babel/cli -  
 //      babel/preset-env  -  checks which browser environment
 
-
-Array.prototype.myMap = function myMap(callback){
-
-}
