@@ -2,7 +2,6 @@
 // call once function
 // desc: create a function which can't be called more than once
 
-
 // var variables = true;
 // const onceFunction = () => {
 //     if(variables == true){
@@ -10,57 +9,62 @@
 //       console.log("Hello JavaScript")
 
 //   }else {
-//       throw "Alredy called once"
+//        throw( "Alredy called once")
 //   }
 // }
 // onceFunction()
 // onceFunction()
 // onceFunction()
 
-
-
-
 //================================     task 2 =============================
 // const arr = [[1,2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 // create a fucntion to flat the array => [1,2,2,4,5,6,2,4,8,9]
 
+const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 
-// const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
-
-// console.log("arr",arr)
-// const getNumber=(arr) => {
-//   arr.forEach((value)=>{
-//     if(Array.isArray(value)){
-//     getNumber(value)
-//     }else{
-//         console.log(value)
-//     }
-// })
-// }
-// getNumber(arr)
-// console.log("test",arr.join())
-
+console.log("arr",arr)
+const getNumber=(arr) => {
+  arr.forEach((value)=>{
+    if(Array.isArray(value)){
+    getNumber(value)
+    }else{
+        console.log(value)
+    }
+})
+}
+getNumber(arr)
+console.log("test",arr.join())
 
 // =========================== task 3 =======================================
 // a = [{name:'amit'}, {name: 'Akshay'}]
 // b = [{name: 'abcd'},{name:'abdc'}, {name:'kjdshck}, {name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'}]
 // result = [{name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'}]
 
-a = [{name:'amit'}, {name: 'Akshay'},{name: 'Joey'}]
-b = [{name: 'abcd'},{name:'abdc'}, {name:'kjdshck'}, {name: 'Akshay'}, {name: 'akshay'}, {name:'AMit'},{name:"Joey"}]
-
+a = [{ name: "amit" }, { name: "Akshay" }, { name: "Joey" }];
+b = [
+  { name: "abcd" },
+  { name: "abdc" },
+  { name: "kjdshck" },
+  { name: "Akshay" },
+  { name: "akshay" },
+  { name: "AMit" },
+  { name: "Joey" },
+];
 
 const compareArray = (a, b) => {
-   let res = [];
-   res = a.filter(ele1 => {
-      return b.find(ele2 => {
-         return ele2.name === ele1.name;
-      });
-   });
-   return res;
-}
-result=compareArray(a, b);
+  let res = [];
+  res = a.filter((ele1) => {
+    return b.find((ele2) => {
+      return ele2.name === ele1.name;
+    });
+  });
+  return res;
+};
+result = compareArray(a, b);
 console.log(result);
+
+
+
 
 
 
@@ -81,10 +85,6 @@ console.log(result);
 //         console.log(res1)
 //     }
 // }
-
-
-    
-
 
 // ======================== Raw Work=============
 // const arr1 =a;

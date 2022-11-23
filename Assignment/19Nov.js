@@ -1,4 +1,4 @@
-// ================================ 1 =======================
+// ======================================= 1 =======================
 // ===== Create a function 'whereAmI' which takes as inputs a latitude value (lat) and a longitude value (lng) =============
 /*
 Create a function 'whereAmI' which takes as inputs a latitude value (lat) and a longitude value (lng) (these are GPS coordinates, examples are below).
@@ -10,21 +10,29 @@ Note: We have geoLocation method for getting the current coordinates:
 https://www.w3schools.com/jsref/prop_nav_geolocation.asp
 */
 
-const whereAmI = async (lat,long) => {
-    try {
-      const data = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`);
-      const myData = await data.json();
-      console.log(`response from lat and long`, myData);
-      console.log(`You Are In ${myData.city}`);
-    } catch (err) {
-      console.log(err, "Error Occured...");
-    }
-  };
-  whereAmI(29.94569,78.164246);
-
+function getData(){
+let location = navigator.geolocation.getCurrentPosition((data)=>{
+    let lat = data.coords.latitude;
+    let long = data.coords.longitude;
+    async function whereAmI(lat, long) {
+        try {
+          const data = await fetch(
+            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`
+          );
+          const myData = await data.json();
+          console.log(`response from lat and long`, myData);
+          console.log(`You Are In ${myData.city}`);
+        } catch (err) {
+          console.log(err, "Error Occured...");
+        }
+      };
+      whereAmI(lat, long);
+})
+return location;
+}
+console.log(getData())
 
 //   --------------------------------- .then -------------------
-
 
 /*
   const whereAmI2 = (lat,long) => {
@@ -41,8 +49,6 @@ const whereAmI = async (lat,long) => {
 
   */
 
-
-
 //   ======================= 2 ======================
 //=======================  Get req ========================
 
@@ -57,7 +63,6 @@ const getData = async () => {
 };
 getData();
 */
-
 
 // ============ POST req , Add New User in (https://reqres.in/api/users) ================
 
@@ -78,32 +83,9 @@ getData();
 // }
 // myData()
 
-
-
-
-
-
-
-
-
-
-
-
 //  https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=lat&longitude=long&localityLanguage=en
 
 // https://reqres.in/api/users
-
-
-
-
-
-
-
-
-
-
-
-
 
 // =================== Raw Work ===============
 // const getData = async () => {
@@ -118,4 +100,6 @@ getData();
 // };
 
 
-
+const data = await fetch(`https://reqres.in/api/users`);
+const data = await fetch(`https://reqres.in/api/users`);
+const data = await fetch(`https://reqres.in/api/users`);
