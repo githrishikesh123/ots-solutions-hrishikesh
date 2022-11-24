@@ -8,16 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main">
-        <h1>StopWatch</h1>
-        <div class="main-prim">
-            <p><span id="min">00</span> min : <span id="sec">00</span> sec<span></span></p>
-            <button onclick="start()">Start</button>
-            <button onclick="stopTime()" id="stopBtn">Stop</button>
-            <button onclick="resetIntv()">Reset</button>
-        </div>
-    </div>
 
-    <script src="./stopWatch.js"></script>
+    <div class="main">
+        <div class="main-prim">
+            <h1>Live Clock</h1>
+            <p><span id="hourValue">00</span>: <span id="minuteValue">00</span>: <span id="secondValue">00</span></p>
+        </div>
+        <div class="main-prim"></div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>

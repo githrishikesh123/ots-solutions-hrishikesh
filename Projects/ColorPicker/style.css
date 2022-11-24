@@ -1,0 +1,44 @@
+.main{
+    justify-content: center;
+    text-align: center;
+    margin:23px  auto;
+    border: 3px solid rgb(54, 80, 102);
+    width: 60%;
+    
+}
+
+.main-prim{
+    margin: 34px;
+}
+.main .main-prim label{
+    font-family: monospace;
+    font-size: 19px;
+}
+.main .main-prim input{
+    background-color: green;
+    margin: 11px;
+    padding: 3px;
+    
+}
+
+.main-sec p{
+    border: 1.7px solid rgb(19, 18, 18);
+    width: 50%!important;
+    /* padding: 19px; */
+    justify-content: center;
+    text-align: center;
+    margin: auto auto;
+    margin-bottom: 23px;
+    min-height: 7vh;
+}
+
+.main-sec p{
+    width: 123px;
+}
+.main-sec p span{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#colorIs{
+    border: 2px solid rgb(6, 28, 48);
+    padding: 28px;
+}

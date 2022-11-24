@@ -21,7 +21,7 @@ body{
     margin: 6px auto;
 }
 .main-prim p span{
-    font-size: 17px;
+    font-size: 21px;
     font-weight: 600;
     margin: 18px 0;
 }
@@ -34,12 +34,10 @@ body{
     font-size: 16px;
     padding: 7px;
     font-family: 'Courier New', Courier, monospace;
-    margin: 6px;
+    margin: 14px;
 }
 
-/* .main-prim button:nth-child(3){
-    background-color: gray;
-} */
+
 .main-prim button:hover{
     cursor: pointer;
     background-color: rgb(15, 95, 15);

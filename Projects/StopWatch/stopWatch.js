@@ -23,7 +23,7 @@ var timer = () => {
 function start() {
   startTime = setInterval(timer, 1000);
   document.getElementById("stopBtn").disabled = false;
-  document.getElementById("stopBtn").style.backgroundColor = "green";
+  document.getElementById("stopBtn").style.backgroundColor = "crimson";
 }
 
 function stopTime() {
