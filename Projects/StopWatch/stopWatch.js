@@ -6,7 +6,7 @@ var seconds = 0;
 var minutes = 0;
 var startTime;
 document.getElementById("stopBtn").disabled = true;
-// document.getElementById("stopBtn").style.backgroundColor = "grey";
+document.getElementById("stopBtn").style.backgroundColor = "grey";
 
 var timer = () => {
   seconds++;

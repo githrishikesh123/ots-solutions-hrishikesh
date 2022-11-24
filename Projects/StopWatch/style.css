@@ -37,9 +37,9 @@ body{
     margin: 6px;
 }
 
-.main-prim button:nth-child(3){
+/* .main-prim button:nth-child(3){
     background-color: gray;
-}
+} */
 .main-prim button:hover{
     cursor: pointer;
     background-color: rgb(15, 95, 15);
