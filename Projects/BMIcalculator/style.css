@@ -20,3 +20,6 @@ form  .submitBtn{
     margin-top: 14px;
     cursor: pointer;
 }
+#resMsg{
+    color: green;
+}

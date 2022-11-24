@@ -98,8 +98,3 @@ getData();
 //     console.log(err, "Error Occured...");
 //   }
 // };
-
-
-const data = await fetch(`https://reqres.in/api/users`);
-const data = await fetch(`https://reqres.in/api/users`);
-const data = await fetch(`https://reqres.in/api/users`);

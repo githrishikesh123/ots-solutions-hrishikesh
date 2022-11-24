@@ -20,20 +20,20 @@
 // const arr = [[1,2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 // create a fucntion to flat the array => [1,2,2,4,5,6,2,4,8,9]
 
-const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
+// const arr = [[1, 2], [2, 4, [5, 6, [2, 4]]], 8, 9]
 
-console.log("arr",arr)
-const getNumber=(arr) => {
-  arr.forEach((value)=>{
-    if(Array.isArray(value)){
-    getNumber(value)
-    }else{
-        console.log(value)
-    }
-})
-}
-getNumber(arr)
-console.log("test",arr.join())
+// const getNumber=(array) => {
+//   array.forEach((value)=>{
+//     if(Array.isArray(value)){
+//     getNumber(value)
+//     }else{
+//         console.log(value)
+//     }
+// })
+// }
+// getNumber(arr)
+
+// console.log("test",arr.join())
 
 // =========================== task 3 =======================================
 // a = [{name:'amit'}, {name: 'Akshay'}]
@@ -53,15 +53,17 @@ b = [
 
 const compareArray = (a, b) => {
   let res = [];
-  res = a.filter((ele1) => {
-    return b.find((ele2) => {
-      return ele2.name === ele1.name;
+  res = b.filter((ele1) => {
+    return a.find((ele2) => {
+      return ele2.name.toUpperCase() === ele1.name.toUpperCase();   //find= returns first ele which passes condition
     });
   });
   return res;
 };
 result = compareArray(a, b);
 console.log(result);
+
+
 
 
 

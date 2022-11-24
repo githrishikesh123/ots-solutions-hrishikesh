@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(32, 64, 73);
+}
+.main{
+    justify-content: center;
+    text-align: center;
+    margin: 55px auto;
+    width: 50%;
+    border: 6px double rgb(9, 71, 90);
+    padding: 16px;
+    font-family: monospace;
+    background-color: white;
+}
+.main h1{
+    padding: 14px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+.main-prim{
+    margin: 6px auto;
+}
+.main-prim p span{
+    font-size: 17px;
+    font-weight: 600;
+    margin: 18px 0;
+}
+
+.main-prim button{
+    border-radius: 4px;
+    background-color: rgb(8, 128, 8);
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 6px;
+}
+
+.main-prim button:nth-child(3){
+    background-color: gray;
+}
+.main-prim button:hover{
+    cursor: pointer;
+    background-color: rgb(15, 95, 15);
+}
