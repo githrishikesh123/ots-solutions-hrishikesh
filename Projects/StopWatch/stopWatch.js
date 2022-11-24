@@ -23,7 +23,8 @@ var timer = () => {
 function start() {
   startTime = setInterval(timer, 1000);
   document.getElementById("stopBtn").disabled = false;
-  document.getElementById("stopBtn").style.backgroundColor = "crimson";
+  document.getElementById("stopBtn").style.backgroundColor = "rgb(175, 13, 13)";
+  document.getElementById("stopBtn").style.cursor = "pointer";
 }
 
 function stopTime() {
@@ -32,8 +33,8 @@ function stopTime() {
 
 function resetIntv() {
   clearInterval(startTime);
-  minutes = 0;
-  seconds = 0;
+  minutes = "00";
+  seconds = "00";
   document.getElementById("min").innerHTML = minutes;
   document.getElementById("sec").innerHTML = seconds;
 }
