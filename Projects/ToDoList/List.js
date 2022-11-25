@@ -3,7 +3,7 @@ var store = [];
 
 addButton.addEventListener("click", () => {
   var inputVal = document.getElementById("inputField").value;
-  console.log(inputVal.length); 
+  console.log(inputVal.length);
 
   if (inputVal.length) {
     console.log(inputVal.length);
