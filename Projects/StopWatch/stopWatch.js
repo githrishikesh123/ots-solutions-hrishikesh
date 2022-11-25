@@ -18,6 +18,9 @@ var timer = () => {
     seconds = 0;
     document.getElementById("min").innerHTML = minutes;
   }
+  if (seconds <= 9) {
+    document.getElementById("sec").innerHTML = "0" + seconds;
+  }
 };
 
 function start() {
@@ -37,4 +40,7 @@ function resetIntv() {
   seconds = "00";
   document.getElementById("min").innerHTML = minutes;
   document.getElementById("sec").innerHTML = seconds;
+  document.getElementById("stopBtn").disabled = true;
+  document.getElementById("stopBtn").style.backgroundColor = "grey";
+  document.getElementById("stopBtn").style.cursor = "default";
 }

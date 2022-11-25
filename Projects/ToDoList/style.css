@@ -1,0 +1,48 @@
+body{
+    background-color: rgba(169, 181, 192, 0.808) ;
+}
+.main{
+    justify-content: center;
+    margin: 19px auto;
+    text-align: center;
+
+}
+.main-prim input{
+    padding: 9px;
+    font-size: 16px;
+}
+.main-prim button{
+    font-weight: 600;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 9px;
+    color: white;
+    width: 7%;
+    margin: 5px;
+}
+.main-prim button:nth-child(2){
+    background-color: green;
+    color: white;
+}
+.main-prim button:nth-child(3){
+    background-color: rgb(194, 146, 16);
+    color: white;
+}
+.main .main-sec ul{
+    text-align: center;
+    margin: 19px auto;
+    width: 33px;
+    font-size: 19px;
+    font-family: monospace;
+    list-style: none;
+    font-weight: 600;
+}
+.main .main-sec ul  button{
+    background-color: rgb(201, 114, 0);
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 6px;
+    margin: 6px;
+}
