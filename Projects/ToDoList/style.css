@@ -27,7 +27,12 @@ body{
 }
 .main-prim button:nth-child(3){
     background-color: rgb(194, 146, 16);
-    color: white;
+    color: rgb(255, 255, 255);
+}
+.main-prim button:nth-child(4){
+    background-color: rgb(12, 97, 4);
+    color: rgb(255, 255, 255);
+    width: 9%;
 }
 .main .main-sec ul{
     text-align: center;
@@ -45,4 +50,13 @@ body{
     border: none;
     padding: 6px;
     margin: 6px;
+}
+
+#list li{
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    padding: 6px;
+    text-transform: capitalize;
 }
