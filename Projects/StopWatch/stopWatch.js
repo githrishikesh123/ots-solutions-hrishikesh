@@ -7,12 +7,11 @@ var minutes = 0;
 var startTime;
 document.getElementById("stopBtn").disabled = true;
 document.getElementById("stopBtn").style.backgroundColor = "grey";
-
+seconds
 var timer = () => {
   seconds++;
   document.getElementById("sec").innerHTML = seconds;
   console.log(seconds);
-
   if (seconds >= 59) {
     minutes += 1;
     seconds = 0;
@@ -20,6 +19,9 @@ var timer = () => {
   }
   if (seconds <= 9) {
     document.getElementById("sec").innerHTML = "0" + seconds;
+  }
+  if (minutes <= 9) {
+    document.getElementById("min").innerHTML = "0" + minutes;
   }
 };
 

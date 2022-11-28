@@ -1,0 +1,44 @@
+.main {
+  margin: 92px auto;
+}
+.main h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 42px;
+    font-family: monospace;
+}
+.main .main-prim,
+.main-sec,
+.main-tirn {
+  display: flex;
+  justify-content: center;
+  margin: 28px auto;
+}
+
+.main .main-prim,
+.main-sec,
+.main-tirn {
+  margin: 0;
+}
+.main .main-prim input, .main-sec input, .main-tirn input {
+  border: 2px solid rgb(79, 98, 114);
+  width: 73px;
+  height: 73px;
+}
+/* .main .main-prim input,.main-sec input,.main-tirn input{
+    
+} */
+
+.main .main-prim input:nth-child(1) , .main-sec input:nth-child(1), .main-tirn input:nth-child(1){
+    border-left: none;
+}
+.main .main-prim input:nth-child(3) , .main-sec input:nth-child(3), .main-tirn input:nth-child(3){
+    border-right: none;
+}
+
+.main .main-prim input{
+    border-top: none;
+}
+.main .main-tirn input{
+    border-bottom: none;
+}
