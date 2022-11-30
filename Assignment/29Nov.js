@@ -25,21 +25,22 @@ document.getElementById("paraOne").addEventListener("click", () => {
 
 let outmost = document.getElementById("outmost");  
 let outer = document.getElementById("outer");  
+let innerDiv = document.getElementById("innerDiv");
 let paraOne = document.getElementById("paraOne");  
+  
 
-// outmost.addEventListener('click', function(){  
-//   console.log("Outmost is invoked");  
-// },true);  
-// outer.addEventListener('click', function(){  
-//   console.log("Outer is invoked");  
-// });  
-// paraOne.addEventListener('click', function(){  
-//   console.log("ParaOne is invoked");  
-// }); 
+outmost.addEventListener('click', function(){  
+  console.log("Outmost is invoked");  
+},true);  
+outer.addEventListener('click', function(){  
+  console.log("Outer is invoked");  
+});  
 
-for(let elem of document.getElementById('*')) {
-  elem.addEventListener("click", e => console.log("Capturing:", elem.tagName), true);
-}
+paraOne.addEventListener('click', function(){  
+  console.log("ParaOne is invoked");  
+}); 
+
+
 
 
 

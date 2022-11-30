@@ -8,13 +8,16 @@
   </head>
   <body>
     <div id="outmost">
-      outmost
+      outmostDiv
       <div id="outer">
-        outer
-        <p id="paraOne">inside</p>
+        outerDiv
+        <div id="inner">
+          InnerDiv
+          <p id="paraOne">inside</p>
+        </div>
       </div>
     </div>
-<!-- ========================== CSS ===== -->
+    <!-- ========================== CSS ===== -->
     <style>
       * {
         text-align: center;
@@ -31,6 +34,11 @@
       }
       #outer {
         border: 2.4px solid rgb(62, 151, 10);
+        margin: 37px;
+        padding: 7px;
+      }
+      #inner {
+        border: 2.4px solid rgb(11, 20, 141);
         margin: 37px;
         padding: 7px;
       }
