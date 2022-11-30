@@ -1,0 +1,25 @@
+ .main-container{
+    text-align: center;
+
+ }
+ .main-container h1{
+    font-family: monospace;
+    font-size: 34px;
+ }
+.main-container .gallery-main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.main-container .gallery-main img {
+  width: 300px;
+  height: 220px;
+  margin: 17px;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+.main-container .gallery-main img:hover {
+  border: 1.2px solid rgb(5, 54, 97);
+  transform: scale(1.03);
+  transition: 0.3s;
+  opacity: 1;
+} 
