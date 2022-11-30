@@ -19,46 +19,63 @@ document.getElementById("paraOne").addEventListener("click", () => {
 */
 
 // Event Capturing=====>
-// Netscape Browser was the first to introduce the concept of Event Capturing. 
-// Event Capturing is opposite to event bubbling, where in event capturing, 
+// Netscape Browser was the first to introduce the concept of Event Capturing.
+// Event Capturing is opposite to event bubbling, where in event capturing,
 ///// an event moves from the outermost element to the target.
-
-let outmost = document.getElementById("outmost");  
-let outer = document.getElementById("outer");  
-let innerDiv = document.getElementById("innerDiv");
-let paraOne = document.getElementById("paraOne");  
-  
-
-outmost.addEventListener('click', function(){  
-  console.log("Outmost is invoked");  
-},true);  
-outer.addEventListener('click', function(){  
-  console.log("Outer is invoked");  
-});  
-
-paraOne.addEventListener('click', function(){  
-  console.log("ParaOne is invoked");  
-}); 
-
-
-
-
-
-
-
-
-
 
 
 /*
-let listOne = document.getElementById("oneLi");
-listOne.addEventListener("click", () => {
-  let color = document.getElementById("oneLi").style.backgroundColor;
-  if (color == "white") {
-    document.getElementById("oneLi").style.backgroundColor = "crimson";
-  } else 
-    document.getElementById("oneLi").style.backgroundColor = "white";
-  
-});
+let outmost = document.getElementById("outmost");
+let outer = document.getElementById("outer");
+let innerDiv = document.getElementById("inner");
+let paraOne = document.getElementById("paraOne");
+
+outmost.addEventListener("click", function () {
+  console.log("OutmostDiv is invoked");
+},true);
+
+outer.addEventListener("click", function () {
+  console.log("OuterDiv is invoked");
+  this.firstChild;
+},true);
+
+innerDiv.addEventListener("click", function () {
+  console.log("innerDiv is invoked");
+},true);
+
+paraOne.addEventListener("click", function () {
+  console.log("ParaOne is invoked");
+},true);
 
 */
+
+
+
+
+// ============ Both Event Bubbling & Event Capturing ===============================>
+/*
+let outmost = document.getElementById("outmost");
+let outer = document.getElementById("outer");
+let innerDiv = document.getElementById("inner");
+let paraOne = document.getElementById("paraOne");
+
+outmost.addEventListener("click", function () {
+  console.log("OutmostDiv is invoked");
+},true);
+
+outer.addEventListener("click", function () {
+  console.log("OuterDiv is invoked");
+  this.firstChild;
+},false);
+
+innerDiv.addEventListener("click", function () {
+  console.log("innerDiv is invoked");
+},false);
+
+paraOne.addEventListener("click", function () {
+  console.log("ParaOne is invoked");
+},true);
+
+*/
+
+
