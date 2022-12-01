@@ -1,11 +1,10 @@
- .main-container{
-    text-align: center;
+/* ========================================================== Using Grid ====== */
 
- }
- .main-container h1{
-    font-family: monospace;
-    font-size: 34px;
- }
+.main-container h1 {
+  font-family: monospace;
+  text-align: center;
+  font-size: 34px;
+}
 .main-container .gallery-main {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -22,4 +21,37 @@
   transform: scale(1.03);
   transition: 0.3s;
   opacity: 1;
+  cursor: pointer;
 } 
+
+/* ================================================= Using FlexBox ====== */
+
+/*
+.main-container h1 {
+  text-align: center;
+  padding: 16px;
+}
+.main-container .gallery-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 30px;
+  margin: 28px;
+}
+
+.main-container .gallery-main img {
+  width: 270px;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.main-container .gallery-main img:hover {
+  border: 1px solid rgb(19, 65, 124);
+  transform: scale(1.03);
+  transition: 0.3s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+*/
