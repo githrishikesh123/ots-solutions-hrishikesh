@@ -1,0 +1,20 @@
+.main-container {
+  border: 2px solid rgba(138, 188, 207, 0.411);
+}
+.main-container .form-container {
+  /* border: 2px solid rgba(5, 91, 148, 0.274); */
+  margin: 29px auto;
+}
+.main-container h1 {
+  text-align: center;
+}
+
+.form-container .form-control {
+  /* width: 30%; */
+  margin: 3px;
+}
+
+.main-container .form-container .namespace label{
+    width: 36%;
+    margin: auto 8px;
+}
