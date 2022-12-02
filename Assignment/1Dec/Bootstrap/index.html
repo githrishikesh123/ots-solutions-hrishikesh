@@ -15,17 +15,12 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="main-container m-3">
+    <div class="main-container m-3 ">
       <h1 class="display-5">Signup Form</h1>
 
-      <div class="form-container m-4 p-3 shadow-lg p-3 mb-5 bg-body rounded">
-        <!-- <div class="input-group">
-            <span class="input-group-text display-6">First and last name</span>
-            <input type="text" aria-label="First name" class="form-control ">
-            <input type="text" aria-label="Last name" class="form-control">
-          </div> -->
+      <div class="form-container m-4 p-3 shadow-lg p-3 mb-5 bg-body rounded ">
         <div class="d-flex justify-content-around">
-          <div class="mb-3 w-50 ">
+          <div class="mb-3 w-50">
             <label for="exampleFormControlInput1" class="form-label h6"
               >First Name</label
             >
@@ -51,7 +46,7 @@
 
         <div class="mb-3 w-50">
           <label for="exampleFormControlInput1" class="form-label h6"
-            >Email address</label
+            >Email Address</label
           >
           <input
             type="email"
@@ -62,7 +57,9 @@
         </div>
 
         <div class="mb-3 w-50">
-          <label for="exampleDataList" class="form-label h6">Select Country</label>
+          <label for="exampleDataList" class="form-label h6"
+            >Select Country</label
+          >
           <input
             class="form-control font-monospace shadow p-2 mb-5 bg-body rounded"
             list="datalistOptions"
@@ -78,26 +75,43 @@
           </datalist>
         </div>
         <div class="mb-3 w-50">
-            <label for="exampleDataList" class="form-label h6">Gender</label>
+          <label for="exampleDataList" class="form-label h6">Gender</label>
 
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Female
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Other
-                </label>
-              </div> 
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Female
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Other
+            </label>
+          </div>
         </div>
 
         <div class="mb-3 w-50">
@@ -106,7 +120,9 @@
         </div>
         <div class="row g-3 align-items-center mb-5 w-50">
           <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label h6">Password</label>
+            <label for="inputPassword6" class="col-form-label h6"
+              >Password</label
+            >
           </div>
           <div class="col-auto">
             <input
@@ -123,7 +139,7 @@
           </div>
         </div>
         <div class="col-auto text-center">
-          <button type="submit" class="btn btn-outline-primary fw-bold ">
+          <button type="submit" class="btn btn-outline-primary fw-bold">
             Confirm identity
           </button>
         </div>

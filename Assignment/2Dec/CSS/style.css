@@ -1,0 +1,50 @@
+
+.main-card .main-card-prim{
+    border: 2px solid rgb(89, 115, 138);
+    width: 21%;
+    margin: 93px auto;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    /* background-color: rgb(222, 232, 240); */
+    border-radius: 6px;
+
+}
+.main-card .main-card-prim img{
+    width: 100%;
+    margin: 4px auto;
+    border-radius: 6px;
+}
+
+.main-card .main-card-prim .main-card-content h1{
+    font-size: 23px;
+    font-family: monospace;
+}
+
+.main-card .main-card-prim .main-card-content p{
+    width: 323px;
+    /* text-align: center; */
+    margin: 4px auto;
+    color: rgba(128, 128, 128, 0.863);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
+.main-card-profile{
+    display: flex;
+    margin-top: 8px;
+}
+.main-card-profile .profile img{
+    border-radius: 50%;
+    width: 50%;
+    float: left;
+    margin: 4px;
+}
+.main-card-profile .profile-detail {
+    margin-left: -42px;
+    margin-top: 12px;
+    line-height: 0px;
+
+}
