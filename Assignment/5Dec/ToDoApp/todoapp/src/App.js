@@ -8,7 +8,7 @@ function App() {
       <div className="todo-main">
         <ButtonOne />
       </div>
-      <div className="todo-content">todo content here</div>
+      <div className="todo-content">List content here</div>
     </div>
   );
 }
