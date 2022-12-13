@@ -16,6 +16,9 @@ function App() {
               screen={i.screen}
               warranty={i.warranty}
               image={i.image}
+              offerPrice={i.offerPrice}
+              rating={i.rating}
+              reviews={i.reviews}
             />
           );
         })}

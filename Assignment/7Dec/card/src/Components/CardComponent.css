@@ -1,4 +1,32 @@
+
 .product-card {
-  border: 4px solid crimson;
   width: 22%;
+  margin: 28px;
+  margin-left: 73px;
+  
 }
+.product-card .card .card-prim{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 6px;
+  padding: 9px;
+
+}
+.icon-prim {
+  /* width: 29px; */
+  cursor: pointer;
+  display: flex;
+  justify-content:end;
+  margin-top: -43px;
+  padding: 6px;
+}
+.product-card .card .list {
+  /* padding: 7px; */
+  text-align: left;
+}
+/* ================================================= Using FlexBox ====== */
+
+
+
+
+
+
