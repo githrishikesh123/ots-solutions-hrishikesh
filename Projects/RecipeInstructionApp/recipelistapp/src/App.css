@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.form-main {
+  margin: 7px;
+}
+.form-main .input-field {
+  padding: 4px;
+  margin: 6px;
+  border: 2px solid rgb(45, 47, 48);
+  border-radius: 2px 3px 6px;
+}
+
+.form-main h2 {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.App-header {
+  background-color: #557cca;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.detail-main {
+  border: 2.4px solid rgb(234, 240, 243);
+  width: 34%;
+  float: right;
+  margin-right: 123px;
+  margin-top: 18px;
+}
+
+.detail-main p {
+  font-size: 17px;
+}
