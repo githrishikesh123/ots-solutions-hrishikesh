@@ -1,0 +1,29 @@
+.form-main input{
+    padding: 4px;
+    margin: 8px;
+}
+.form-main button{
+    padding: 7px ;
+    margin: 4px;
+    border:  none;
+    background-color: rgb(8, 122, 167);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+    
+}
+.form-main button:nth-child(3){
+    padding: 7px ;
+    margin: 4px;
+    border:  none;
+    background-color: rgb(58, 63, 65);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}  
+.form-main button:hover{
+    transform: scale(1.03);
+    transform: .7s;
+}
