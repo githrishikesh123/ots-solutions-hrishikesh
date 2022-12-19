@@ -2,7 +2,7 @@ import "./App.css";
 import SearchForm from "./components/SearchForm";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import List from './components/List/List'
+import List from "./components/List/List";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -56,7 +56,7 @@ function App() {
       <div>
         <SearchForm filterPokemon={filterPokemon} />
         <div>
-          <List pokemons={filteredPokemons}/>
+          <List pokemons={filteredPokemons} />
         </div>
         <br />
         <button onClick={() => setCurrentPage(1)}>1</button>

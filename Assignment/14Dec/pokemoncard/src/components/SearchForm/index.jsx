@@ -23,6 +23,12 @@ const SearchForm = ({ filterPokemon }) => {
           <input type="text" name="pokemon" id="" onChange={search} />
           <button disabled={disable} onClick={()=>{btnSearch()}}>Search</button>
           <button   onClick={()=>{setDisable(false)}}>Reset</button>
+          <label htmlFor="">Sort</label>
+          <select name="" id="">
+            <option value="long">Long</option>
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+          </select>
         </form>
       </div>
     </>

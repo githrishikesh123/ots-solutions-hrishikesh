@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.editTrainee:hover {
+  color: rgb(50, 142, 158) !important;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.deleteTrainee:hover {
+  color: rgb(187, 20, 43);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.editTrainee {
+  margin-right: 6px !important;
+}
+.deleteTrainee {
+  margin-left: 6px !important;
+}
+.button-main label{
+  background-color: rgb(14, 106, 167);
+  padding: 6px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+.button-main select{
+  background-color: rgb(243, 236, 238);
+  padding: 5px;
+  border-radius: 6px;
+  margin: 3px;
+}
