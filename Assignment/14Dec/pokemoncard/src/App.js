@@ -1,14 +1,18 @@
 import "./App.css";
 import SearchForm from "./components/SearchForm";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import List from "./components/List/List";
+export const HeightContext = createContext();
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
   const [paginatedPokemons, setPaginatedPokemons] = useState([]);
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [height,setHeight]=useState('max')
+  // const [heightType,setHeightType]=useState('')
+  // const [allHeight,setAllHeight]=useState([])
   // -------------------------------------------------------------
   const filterPokemon = (searchValue) => {
     const newPokemons = paginatedPokemons.filter((pokemon) =>
@@ -23,6 +27,7 @@ function App() {
       .get("https://pokeapi.co/api/v2/pokemon/")
       .then(({ data: { results } }) => {
         setPokemons(results);
+
         setPaginatedPokemons(results.slice(0, 5));
         setFilteredPokemons(results.slice(0, 5));
       })
@@ -51,11 +56,52 @@ function App() {
     }
   }, [currentPage]);
   console.log(currentPage);
+  console.log(filteredPokemons);
+  // ----------------------------------------------
+  useEffect(()=>{
+    if(height==='min'){
+      console.log('min.....')
+    }
+    else if(height==='max'){
+      console.log('max.......')
+    }
+  },[height])
+  // ----------------------------------------------------------------
+  // useEffect(()=>{
+  //   if(heightType==='min'){
+  //     console.log('minheight')
+  //   }
+  //   else if(heightType==='medium'){
+  //     console.log('medium')
+  //   }
+  //   else if(heightType==='max'){
+  //     console.log('max')
+  //   }
+  // },[heightType])
+  // const getHeight=(height)=>{
+  //   if(height.length!==0){
+  //     setAllHeight((pre)=>[...pre,height])
+  //   }
+  // }
+
   return (
     <div className="main-container" style={{ marginLeft: "20px" }}>
       <div>
         <SearchForm filterPokemon={filterPokemon} />
+        {/* <button onClick={()=>{setHeight('min')}}>heighttttt</button> */}
+        {/* ---------------------------------------------------------------- SortByHeight ------- */}
+        {/* <select defaultValue="Select">
+          <option value="Select" disabled>
+            Sort By Height
+          </option>
+          <option value="min">Small</option>
+          <option value="medium">Medium</option>
+          <option value="max">Large</option>
+        </select> */}
         <div>
+          {/* <HeightContext.Provider value={heightType}>
+          <List pokemons={filteredPokemons} />
+          </HeightContext.Provider> */}
           <List pokemons={filteredPokemons} />
         </div>
         <br />

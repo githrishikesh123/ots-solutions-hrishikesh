@@ -27,3 +27,19 @@
     transform: scale(1.03);
     transform: .7s;
 }
+button:disabled {
+    background-color:gray;
+    cursor: default;
+}
+.form-main select{
+    background-color: rgb(4, 105, 136);
+    color: white;
+    padding: 5.4px;
+    border-radius: 3px;
+    border: none;
+}
+.form-main select option{
+    background-color: white;
+    color: black;
+    font-family: monospace;
+}

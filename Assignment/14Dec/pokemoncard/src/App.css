@@ -22,7 +22,8 @@
   text-align: center;
 }
 .listItem-main{
-  border: 2px solid rgb(216, 207, 209);
+  margin-top: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   margin: 8px;
 }
 .listItem-main h4{
@@ -31,22 +32,24 @@
   font-family: monospace;
 }
 .listItem-main img{
-  width: 26%;
+  width: 36%;
 }
 .list-main{
-  border: 2px solid rgb(12, 131, 121);
-  width: 43%;
+  border: 2px solid rgb(242, 247, 246);
 }
-.list-main div{
-  
-}
+
 .main-container button{
+  /* border: 1px solid rgb(187, 240, 250); */
   padding: 8px;
   margin-bottom: 13px;
   cursor: pointer;
 }
 
-.main-container button:hover{
+/* .main-container button:hover{
   color: rgb(10, 90, 128);
   background-color: greenyellow;
+} */
+.list-main-prim {
+  display: flex;
+  justify-content: space-between;
 }

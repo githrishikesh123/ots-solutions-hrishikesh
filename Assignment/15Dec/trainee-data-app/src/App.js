@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import MenuBar from "./components/MenuBar";
 import TraineesComponent from './components/TraineesComponent'
+import ContactUs from "./components/ContactUs";
+import Home from "./components/Home";
+
 
 function App() {
   return (
@@ -10,11 +13,13 @@ function App() {
       <h1>OTS Solutions</h1>
       <MenuBar />
       <Routes>
-        <Route path="/" element={<div>Home</div>} />
-        <Route path="/services" element={<div>Services</div>} />
-        <Route path="/contactus" element={<div>Contact Us</div>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="home" element={<Home/>} />
+        <Route path="/services" element={<div><h3>Services</h3></div>} />
+        <Route path="/contactus" element={<ContactUs/>} />
         <Route path="/trainees" element={<TraineesComponent />} />
       </Routes>
+      
     </div>
   );
 }

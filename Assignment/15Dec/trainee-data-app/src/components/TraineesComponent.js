@@ -118,14 +118,14 @@ const TraineesComponent = () => {
     if (order == "ascending") {
       //  sort by String property ASCENDING (A - Z)
       const strAscending = [...mockTraineesData].sort((a, b) =>
-        a.firstName > b.lastName ? 1 : -1
+        a.firstName > b.firstName ? 1 : -1
       );
       console.log(strAscending);
       setTraineesList(strAscending);
     } else if (order == "descending") {
       // sort by String property DESCENDING (Z - A)
       const strDescending = [...mockTraineesData].sort((a, b) =>
-        a.firstName > b.lastName ? -1 : 1
+        a.firstName > b.firstName ? -1 : 1
       );
       console.log(strDescending);
       setTraineesList(strDescending);
