@@ -1,8 +1,13 @@
 import React from "react";
-import { Table, Icon, Popup, Button, Header, Modal } from "semantic-ui-react";
+import {Table,Icon,Popup,Button,Header,Modal,Form,Input} from "semantic-ui-react";
 import "../App.css";
 
 const TraineesList = ({ trainees }) => {
+  console.log(
+    trainees.map((i) => {
+      return i;
+    })
+  );
   const [open, setOpen] = React.useState(false);
   return (
     <>
@@ -28,7 +33,7 @@ const TraineesList = ({ trainees }) => {
                         {trainee.firstName} {trainee.lastName}
                       </Table.Cell>
                       <Table.Cell>{trainee.email}</Table.Cell>
-                      <Table.Cell>{trainee.gender}</Table.Cell>
+                      <Table.Cell>{trainee.gender} </Table.Cell>
                       <Table.Cell className="edit-icon-set">
                         {/* <Icon name="edit" className="editTrainee" size="large" /> */}
                         {/* -------------------------------------------------------------------------- Modal - */}
@@ -47,10 +52,11 @@ const TraineesList = ({ trainees }) => {
                         >
                           <Header
                             icon="archive"
-                            content="Archive Old Messages"
+                            content={`Edit ${trainee.firstName}'s Data`}
                           />
                           <Modal.Content>
-                            <p >Edit {trainee.firstName}'s Data.</p>
+                            <p>Edit Trainees's Data.</p>
+                                   
                           </Modal.Content>
                           <Modal.Actions>
                             <Button color="red" onClick={() => setOpen(false)}>

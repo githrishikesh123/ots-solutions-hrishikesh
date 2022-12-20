@@ -58,14 +58,14 @@ function App() {
   console.log(currentPage);
   console.log(filteredPokemons);
   // ----------------------------------------------
-  useEffect(()=>{
-    if(height==='min'){
-      console.log('min.....')
-    }
-    else if(height==='max'){
-      console.log('max.......')
-    }
-  },[height])
+  // useEffect(()=>{
+  //   if(height==='min'){
+  //     console.log('min.....')
+  //   }
+  //   else if(height==='max'){
+  //     console.log('max.......')
+  //   }
+  // },[height])
   // ----------------------------------------------------------------
   // useEffect(()=>{
   //   if(heightType==='min'){
@@ -84,20 +84,24 @@ function App() {
   //   }
   // }
 
+  function heightFunc(value){
+    console.log(value)
+  }
+
   return (
     <div className="main-container" style={{ marginLeft: "20px" }}>
       <div>
         <SearchForm filterPokemon={filterPokemon} />
         {/* <button onClick={()=>{setHeight('min')}}>heighttttt</button> */}
         {/* ---------------------------------------------------------------- SortByHeight ------- */}
-        {/* <select defaultValue="Select">
-          <option value="Select" disabled>
+        <select defaultValue="Select" value={value} onChange={(value)=>{heightFunc(value)}}>
+          {/* <option value="Select" disabled>
             Sort By Height
-          </option>
+          </option> */}
           <option value="min">Small</option>
           <option value="medium">Medium</option>
           <option value="max">Large</option>
-        </select> */}
+        </select>
         <div>
           {/* <HeightContext.Provider value={heightType}>
           <List pokemons={filteredPokemons} />
