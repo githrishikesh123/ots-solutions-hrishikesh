@@ -10,7 +10,7 @@ function App() {
   const [paginatedPokemons, setPaginatedPokemons] = useState([]);
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [height,setHeight]=useState('max')
+  const [height, setHeight] = useState("max");
   // const [heightType,setHeightType]=useState('')
   // const [allHeight,setAllHeight]=useState([])
   // -------------------------------------------------------------
@@ -84,8 +84,8 @@ function App() {
   //   }
   // }
 
-  function heightFunc(value){
-    console.log(value)
+  function heightFunc(value) {
+    console.log(value);
   }
 
   return (
@@ -94,7 +94,13 @@ function App() {
         <SearchForm filterPokemon={filterPokemon} />
         {/* <button onClick={()=>{setHeight('min')}}>heighttttt</button> */}
         {/* ---------------------------------------------------------------- SortByHeight ------- */}
-        <select defaultValue="Select" value={value} onChange={(value)=>{heightFunc(value)}}>
+        <select
+          defaultValue="Select"
+          // value={value}
+          onChange={(value) => {
+            heightFunc(value);
+          }}
+        >
           {/* <option value="Select" disabled>
             Sort By Height
           </option> */}
