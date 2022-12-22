@@ -2,17 +2,24 @@ import React, { useEffect, useState } from "react";
 import { Header, Input, Button, Dropdown } from "semantic-ui-react";
 import TraineesList from "./TraineesList";
 import "../App.css";
+import EditModal from "../Modal/EditModal";
 const TraineesComponent = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [traineesList, setTraineesList] = useState([]);
   const [searchedTraineesList, setSearchedTraineesList] = useState([]);
   // --------------------
+  const [passModal,setPassModal] = useState(true)
   const [order, setOrder] = useState("");
 
   const handleChange = (event) => {
     setOrder(event.target.value);
   };
-  console.log(order);
+  // --------------------------------- modal func --------
+  function modalFunc(modalOpen){
+    console.log(modalOpen)
+    setPassModal(modalOpen)
+    console.log(passModal)
+  }
   // -----------------------
   const mockTraineesData = [
     {
@@ -149,6 +156,7 @@ const TraineesComponent = () => {
           placeholder="Search Name"
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <EditModal passModal={passModal}/>
         <div className="button-main">
           {/* --------- */}
           <label htmlFor="">Sort</label>
@@ -171,6 +179,7 @@ const TraineesComponent = () => {
       <div style={{ margin: "1rem" }}>
         <TraineesList
           trainees={searchTerm == "" ? traineesList : searchedTraineesList}
+          modalFunc={modalFunc}
         />
       </div>
     </>

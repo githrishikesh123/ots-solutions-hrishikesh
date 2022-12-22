@@ -1,14 +1,20 @@
-import React from "react";
-import {Table,Icon,Popup,Button,Header,Modal,Form,Input} from "semantic-ui-react";
+import React, { useState } from "react";
+import {Table,Icon,Popup,Button,Header,Modal,Form,Input,} from "semantic-ui-react";
 import "../App.css";
+import EditModal from "../Modal/EditModal";
 
-const TraineesList = ({ trainees }) => {
+const TraineesList = ({ trainees ,modal,modalFunc}) => {
+  const [modalOpen,setModalOpen] = useState(false)
+  function setModal(){
+    setModalOpen(true)
+    modalFunc(modalOpen)
+  }
   console.log(
     trainees.map((i) => {
       return i;
     })
   );
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
   return (
     <>
       {trainees.length > 0 && (
@@ -35,41 +41,14 @@ const TraineesList = ({ trainees }) => {
                       <Table.Cell>{trainee.email}</Table.Cell>
                       <Table.Cell>{trainee.gender} </Table.Cell>
                       <Table.Cell className="edit-icon-set">
-                        {/* <Icon name="edit" className="editTrainee" size="large" /> */}
+                        
                         {/* -------------------------------------------------------------------------- Modal - */}
-                        <Modal
-                          closeIcon
-                          open={open}
-                          trigger={
-                            <Icon
-                              name="edit"
-                              className="editTrainee"
-                              size="large"
-                            />
-                          }
-                          onClose={() => setOpen(false)}
-                          onOpen={() => setOpen(true)}
-                        >
-                          <Header
-                            icon="archive"
-                            content={`Edit ${trainee.firstName}'s Data`}
-                          />
-                          <Modal.Content>
-                            <p>Edit Trainees's Data.</p>
-                                   
-                          </Modal.Content>
-                          <Modal.Actions>
-                            <Button color="red" onClick={() => setOpen(false)}>
-                              <Icon name="remove" /> No
-                            </Button>
-                            <Button
-                              color="green"
-                              onClick={() => setOpen(false)}
-                            >
-                              <Icon name="checkmark" /> Yes
-                            </Button>
-                          </Modal.Actions>
-                        </Modal>
+                        <Icon
+                          name="edit"
+                          className="editTrainee"
+                          size="large"
+                          onClick={()=>{setModal()}}
+                        />
                         {/* ------------------------------------------------------------------ */}
                         <Icon
                           name="user delete"
@@ -83,8 +62,11 @@ const TraineesList = ({ trainees }) => {
               );
             })}
         </Table>
+        
+       
       )}
       <div>{trainees.length == 0 && <div>No Data Found!</div>}</div>
+      {modal? <p>ddd</p>:<p>ssss</p>}
     </>
   );
 };
