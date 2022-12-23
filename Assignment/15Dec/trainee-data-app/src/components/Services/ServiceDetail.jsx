@@ -6,7 +6,7 @@ const ServiceDetail = () => {
   const {id}=useParams()
   const {img,service,describe}=ServicesData[id];
   return (
-    <div>
+    <div className='App'>
       <h1>{service}</h1>
       <div>
         <p>{describe}</p>

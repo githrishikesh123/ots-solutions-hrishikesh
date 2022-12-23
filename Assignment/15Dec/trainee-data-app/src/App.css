@@ -79,7 +79,7 @@
 }
 
 .card-main .ui.card:hover{
-  box-shadow: rgba(212, 230, 48, 0.719) 0px 10px 20px, rgba(83, 208, 247, 0.795) 0px 6px 6px;
+  box-shadow: rgba(68, 68, 67, 0.719) 0px 10px 20px, rgba(83, 208, 247, 0.795) 0px 6px 6px;
   transform: scale(1.02);
   cursor: pointer;
 }
