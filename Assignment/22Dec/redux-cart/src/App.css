@@ -27,12 +27,56 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-card-main{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  height: 280px;
+  width: 280px;
+  margin: 7px;
+  margin-left: 23px;
+  padding: 7px;
+}
+.product-card-main img{
+  width: 123px;
+  margin-top: 12px;
+}
+.product-card-main button{
+  border: none;
+  padding: 7px;
+  margin-top: 4px;
+  color: white;
+  background-color: #2997b6;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+.product-card-main button:hover{
+  cursor: pointer;
+  transform: scale(1.04);
+  background-color: rgb(3, 156, 3);
+}
+/* ------------ */
+.cart-card-main{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  height: 340px;
+  width: 280px;
+  margin: 7px;
+  margin-left: 23px;
+  padding: 7px;
+}
+.cart-card-main img{
+  width: 123px;
+  margin-top: 12px;
+}
+.cart-card-main button{
+  border: none;
+  padding: 7px;
+  margin-top: 4px;
+  color: white;
+  background-color: #2997b6;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+.cart-card-main button:hover{
+  cursor: pointer;
+  transform: scale(1.04);
+  background-color: rgb(8, 8, 8);
 }

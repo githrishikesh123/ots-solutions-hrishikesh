@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeFromCart ,clearCart,incrementQuantity,decrementQuantity} from '../redux/cart-reducer'
+import { removeFromCart ,clearCart,incrementQuantity,decrementQuantity} from '../redux/cart-reducer';
+import '../App.css'
 
 const Cart = () => {
     const {cartItem} = useSelector((state)=>state.cart.data)
@@ -14,7 +15,8 @@ const Cart = () => {
         <div style={{display:'flex', flexWrap:'wrap'}}>
             {cartItem ? (
                 cartItem.map((product, index)=>(
-                <div style={{height:'300px', width:'300px', border:'1px solid'}} key={product.id}>
+                <div className='cart-card-main' key={product.id}>
+                  <img src={product.img} alt="" />
                     <div>{product.id}</div>
                     <div>{product.name}</div>
                     <div>{product.price}</div>
