@@ -8,7 +8,7 @@ const ServiceDetail = () => {
   return (
     <div className='App'>
       <h1>{service}</h1>
-      <div>
+      <div className='img-card'>
         <p>{describe}</p>
         <img src={img} alt="" />
       </div>
