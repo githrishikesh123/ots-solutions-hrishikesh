@@ -8,9 +8,8 @@ userRouter.get("/", (req, res) => {
 });
 
 userRouter.post("/profile", (req, res) => {
-  const id = req.params.id;
   console.log("Create User POST responce");
-  res.send(`POST request for ID...${id} `);
+  res.send(`User profile POST request`)
 });
 
 userRouter.put("/update", (req, res) => {

@@ -1,14 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const EmployeeSchema = require("./schema/schema");
+const model = require("./schema/schema");
 
 const app = express();
 
-const db_url = "mongodb://localhost:27017/schemaDB";
+const dbUrl = "mongodb://localhost:27017/schemaDB";
+mongoose.set('strictQuery', true);
 
 const dbConnection = async () => {
-  await mongoose
-    .connect(db_url, {
+   mongoose
+    .connect(dbUrl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
@@ -20,3 +21,6 @@ const dbConnection = async () => {
     });
 };
 dbConnection();
+
+
+
