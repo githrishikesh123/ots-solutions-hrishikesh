@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;" class="text-color">List Of Books</h1>
+
+    <ul class="books-list">
+      {{#each books}}
+        <li><a href="/books/{{this.id}}">{{this.title}}</a></li> <br>
+      {{/each}}
+    </ul>
+
+    <style>
+      .books-list{
+        margin: 23px;
+      }
+      .books-list li {
+        list-style: none;
+        list-style:square;
+
+      }
+      .books-list li a{
+        color: black;
+        font-size: 19px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .books-list li a:hover{
+        color: crimson;
+      }
+    </style>
+  </body>
+</html>

@@ -1,4 +1,8 @@
 /*
+userDB
+userDB123
+
+
 POST = Create NEW record
         create new resource at Database. It means it adds new data.
         [ Create in CRUD ]
@@ -21,7 +25,8 @@ DELETE = delete;
 PUT===>
         If we want to change the first name then we send a put request for Update
 
-        { "first": "Michael", "last": "Angelo" }
+        { "first": "Michael
+        ", "last": "Angelo" }
 
         Here, although we are only changing the first name, with PUT request we have to send both parameters 
         first and last.
@@ -35,50 +40,59 @@ PATCH===>
 */
 
 
-import { createSlice } from "@reduxjs/toolkit";
+require('dotenv').config();
 
-const initialState = {
-  data: { cartItem: {} },
-};
+const express = require('express');
+const mongoose = require('mongoose');
+const mongoString = process.env.DATABASE_URL;
 
-const cartSlice = createSlice({
-  name: "cart",
-  initialState,
-  reducers: {
-    addCart: (state, action) => {
-      if (Object.keys(state.data.cartItem).length === 0) {
-        state.data = {
-          cartItem: { [action.payload.id]: { ...action.payload } },
-        };
-      } else if (state.data.cartItem.hasOwnProperty(action.payload.id)) {
-        let count1 = state.data.cartItem[action.payload.id].count + 1;
-        state.data = {
-          cartItem: {
-            ...state.data.cartItem,
-            [action.payload.id]: {
-              ...state.data.cartItem[action.payload.id],
-              count: count1,
-            },
-          },
-        };
-      } else {
-        state.data = {
-          cartItem: {
-            ...state.data.cartItem,
-            [action.payload.id]: { ...action.payload },
-          },
-        };
-      }
-    },
-    removeFromCart: (state, action) => {
-      if (state.data.cartItem[action.payload].id === action.payload) {
-        let item = delete state.data.cartItem[action.payload];
-        state.data = { cartItem: { ...state.data.cartItem, ...item } };
-      }
-    },
-  },
-});
+mongoose.connect(mongoString);
+const database = mongoose.connection;
 
-export const { addCart, removeFromCart } = cartSlice.actions;
+database.on('error', (error) => {
+    console.log(error)
+})
 
-export default cartSlice;
+database.once('connected', () => {
+    console.log('Database Connected');
+})
+const app = express();
+
+app.use(express.json());
+
+app.listen(3000, () => {
+    console.log(`Server Started at ${3000}`)
+})
+
+// ======================================================== Netlify 
+
+folder => dist
+		index.html
+
+at root => netlify.toml
+
+[build]
+	functions = "functions"
+
+
+
+script =>
+	start : "./
+
+
+
+app.use("/.netlify/functions/api", router)
+
+import express from "express";
+import serverless from "serverless-http";
+
+const app = express()
+const router = express.Router()
+
+router.get('/users', (req,res)=>{
+    res.send(" getting Users")
+})
+
+ app.use('/.netlify/functions/api' , router);
+
+ module.exports.handler = serverless(app) 

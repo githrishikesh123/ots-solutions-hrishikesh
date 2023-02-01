@@ -2,14 +2,14 @@ const express = require("express");
 
 const userRouter = express.Router();
 
-userRouter.get("/", (req, res) => {
+userRouter.get("/:id", (req, res) => {
   console.log("Default GET responce");
   res.send("GET request running ");
 });
 
 userRouter.post("/profile", (req, res) => {
   console.log("Create User POST responce");
-  res.send(`User profile POST request`)
+  res.send(`User profile POST request`);
 });
 
 userRouter.put("/update", (req, res) => {

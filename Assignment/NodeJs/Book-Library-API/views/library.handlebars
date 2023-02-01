@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;" class="text-font flex-justify">
+      <span>List Of Books</span>
+      <a href="/api/books/booksupdate"><button type="button" class="btn btn-success">Add
+          Book</button></a>
+    </h1>
+    <div>
+
+      <div class="row">
+        {{#each books}}
+
+          <div class="card col-sm-4" style="width: 32%; text-align:center;">
+
+            <div class="card-body">
+              <a class="card-text" href="/api/books/{{this._id}}">{{this.name}}</a>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <style>
+
+      .book-card{ border: .1px solid black; margin: 6px; text-align:center; }
+      .row div a{ color: black; font-size: 19px; font-weight: 500;
+      text-decoration: none; } .row div a:hover{ color: crimson; } .card-w{
+      margin: 4px; }
+    </style>
+
+  </body>
+</html>
