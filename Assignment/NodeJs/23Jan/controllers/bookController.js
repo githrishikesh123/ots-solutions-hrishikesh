@@ -4,7 +4,7 @@ import books from "../data/books.js";
 
 dotenv.config();
 const PORT = process.env.PORT || 8000;
-const MONGO_URI = "mongodb+srv://userDB:userDB123@cluster0.4qpy1g9.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URI = "";
 const listOfBooks = books;
 async function main() {
   if (MONGO_URI) {
